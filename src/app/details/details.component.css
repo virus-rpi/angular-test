@@ -52,7 +52,7 @@ input {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: solid .3px;
+  border-bottom: solid 1px;
 }
 @media (max-width: 1024px) {
   .listing-photo {
