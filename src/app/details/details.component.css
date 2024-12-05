@@ -60,3 +60,13 @@ input {
     height: 400px;
   }
 }
+
+input:user-invalid {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+button:disabled {
+  background: var(--disabled-color);
+  border: solid 1px var(--disabled-color);
+  color: white;
+}

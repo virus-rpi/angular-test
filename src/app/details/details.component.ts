@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HousingService} from '../housing.service';
 import {HousingLocation} from '../housinglocation';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 @Component({
@@ -34,12 +34,12 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
         <h2 class="section-heading">Apply now to live here</h2>
         <form [formGroup]="applyForm" (submit)="submitApplication()">
           <label for="first-name">First Name</label>
-          <input id="first-name" type="text" formControlName="firstName"/>
+          <input id="first-name" type="text" formControlName="firstName" required />
           <label for="last-name">Last Name</label>
-          <input id="last-name" type="text" formControlName="lastName"/>
+          <input id="last-name" type="text" formControlName="lastName" required />
           <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email"/>
-          <button type="submit" class="primary">Apply now</button>
+          <input id="email" type="email" formControlName="email" required/>
+          <button type="submit" class="primary" [disabled]="applyForm.invalid" >Apply now</button>
         </form>
       </section>
     </article>
@@ -52,9 +52,9 @@ export class DetailsComponent {
   housingService: HousingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;
   applyForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
   })
 
   constructor() {
