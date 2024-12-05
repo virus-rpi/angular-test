@@ -1,6 +1,7 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {DetailsComponent} from './details/details.component';
+import {TestComponent} from './test/test.component';
 
 const routeConfig: Routes = [
   {
@@ -13,5 +14,10 @@ const routeConfig: Routes = [
     component: DetailsComponent,
     title: 'Home details',
   },
+  {
+    path: 'test',
+    component: TestComponent,
+    title: 'Test page',
+  }
 ];
 export default routeConfig;
