@@ -1,19 +1,30 @@
 .results {
   display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
+  grid-gap: 24px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-  margin-top: 50px;
+  margin: 50px 24px 0 24px;
   justify-content: space-around;
 }
+
 input[type="text"] {
   border: solid 1px var(--primary-color);
   padding: 10px;
   border-radius: 8px;
   margin-right: 4px;
   display: inline-block;
-  width: 30%;
+  width: 100%;
+  max-width: 1000px;
 }
+
+input[type=number] {
+  border: solid 1px var(--primary-color);
+  padding: 4px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 40px;
+}
+
 button {
   padding: 10px;
   border: solid 1px var(--primary-color);
@@ -21,16 +32,38 @@ button {
   color: white;
   border-radius: 8px;
 }
+
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
       grid-template-columns: repeat(2, 1fr);
-  }
-  input[type="text"] {
-      width: 70%;
   }
 }
 @media (max-width: 499px) {
   .results {
       grid-template-columns: 1fr;
   }
+}
+
+.filter_label {
+  margin-right: 10px;
+}
+
+.filter_section {
+  margin: 8px 24px;
+  display: flex;
+  align-content: center;
+  gap: 8px;
+}
+
+.filter_section > span {
+  display: flex;
+  align-items: center;
+  border-right: solid 1px var(--primary-color);
+  padding-right: 8px;
+  gap: 4px;
+}
+
+.filter_section > span:last-child {
+  border-right: none;
+  padding-right: 0;
 }
