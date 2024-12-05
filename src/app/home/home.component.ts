@@ -32,6 +32,10 @@ import {FormsModule} from '@angular/forms';
         *ngFor="let housingLocation of filteredLocationList"
         [housingLocation]="housingLocation"
       ></app-housing-location>
+      <div *ngIf="filteredLocationList.length === 0">
+        <p>No results found</p>
+        <button (click)="resetFilters()">Clear filters</button>
+      </div>
     </section>
   `,
   styleUrls: ['./home.component.css'],
@@ -81,6 +85,16 @@ export class HomeComponent {
 
   toggleUnitsFilter(checked: boolean, value: string) {
     this.filterCriteria.units = checked ? Number(value) : 0
+    this.filterResults();
+  }
+
+  resetFilters() {
+    this.filterCriteria = {
+      city: '',
+      units: 0,
+      wifi: false,
+      laundry: false,
+    }
     this.filterResults();
   }
 
