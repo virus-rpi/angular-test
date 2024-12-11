@@ -17,7 +17,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         backgroundColor: 'green'
       })),
       transition('open => closed', [
-        animate('1s')
+        animate('0.3s')
       ]),
       transition('closed => open', [
         animate('0.5s')
