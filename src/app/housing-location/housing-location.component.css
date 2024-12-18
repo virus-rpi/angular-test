@@ -37,3 +37,16 @@ a.listing p:last-child::after {
   content: "\203A";
   margin-left: 5px;
 }
+
+.listing-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.listing-save {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+}

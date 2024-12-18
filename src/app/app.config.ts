@@ -4,7 +4,9 @@ import routeConfig from './routes';
 import {provideProtractorTestingSupport} from '@angular/platform-browser';
 import {provideHttpClient} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
+import {provideStore} from '@ngrx/store';
+import {isReducer} from './state/favorite.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideProtractorTestingSupport(), provideRouter(routeConfig), provideHttpClient(), provideAnimations()],
+  providers: [provideProtractorTestingSupport(), provideRouter(routeConfig), provideHttpClient(), provideAnimations(), provideStore({favorite: isReducer})],
 };
