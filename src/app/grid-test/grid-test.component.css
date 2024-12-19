@@ -1,0 +1,16 @@
+.grid-fav {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+}
+
+.grid-fav:hover {
+  cursor: pointer;
+}
+
+.grid-fav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
