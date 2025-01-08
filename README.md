@@ -29,3 +29,9 @@ Once the server is running, open your browser and navigate to `http://localhost:
   - Added alternative view for the house list (using `ag-grid-angular`)
   - Added custom field to the `ag-grid` table for the favorite button (including posibity to sort and filter by favorite)
   - Made custom field for the location combining city and state
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/ff9ac513-69c1-413f-a45d-205e4b79fbb8)
+![image](https://github.com/user-attachments/assets/b6fb2e2f-e904-4636-afaf-15e15b1f95a0)
+![image](https://github.com/user-attachments/assets/df95f7d9-69d0-4a4b-95be-f99b9af831b4)
+
