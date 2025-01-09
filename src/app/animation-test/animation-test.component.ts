@@ -25,7 +25,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ],
   templateUrl: './animation-test.component.html',
-  styleUrl: './animation-test.component.css'
+  styleUrls: ['./animation-test.component.css']
 })
 
 export class AnimationTestComponent {

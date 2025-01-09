@@ -14,7 +14,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
   selector: 'app-grid-test',
   imports: [AgGridAngular],
   templateUrl: './grid-test.component.html',
-  styleUrl: './grid-test.component.css'
+  styleUrls: ['./grid-test.component.css']
 })
 export class GridTestComponent {
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;

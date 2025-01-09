@@ -11,7 +11,7 @@ import {GridTestComponent} from '../grid-test/grid-test.component';
     GridTestComponent
   ],
   templateUrl: './test.component.html',
-  styleUrl: './test.component.css'
+  styleUrls: ['./test.component.css']
 })
 export class TestComponent {
   isOpen: boolean = false;
