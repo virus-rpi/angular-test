@@ -49,7 +49,7 @@ import {ViewsService} from '../views.service';
       </section>
     </article>
   `,
-  styleUrl: './details.component.css',
+  styleUrls: ['./details.component.css'],
   standalone: true
 })
 
